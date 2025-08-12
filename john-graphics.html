@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>John Graphics - EXPERTS TECH HUB</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+
+    /* HEADER */
+    header {
+        background-image: url('c.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(50, 95, 241, 0.5);
+        z-index: 0;
+    }
+    header img.logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid white;
+        position: relative;
+        z-index: 1;
+    }
+    header h1 {
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+        font-size: 2.5em;
+    }
+    nav {
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* MAIN */
+    main {
+        max-width: 1000px;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    main p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    /* FEATURED IMAGE */
+    .featured {
+        width: 100%;
+        max-height: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+        object-fit: cover;
+    }
+
+    /* GALLERY */
+    .gallery { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        gap: 15px; 
+        margin-top: 20px; 
+    }
+    .gallery img { 
+        width: 100%; 
+        height: 180px; 
+        object-fit: cover; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery img:hover { 
+        transform: scale(1.05); 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.9);
+        align-items: center;
+        justify-content: center;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+    .lightbox:target {
+        display: flex;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #325ff1;
+        color: white;
+        padding: 20px 10px;
+        text-align: center;
+    }
+    footer img.logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    footer p {
+        margin: 5px 0;
+    }
+    .social-heading {
+        font-weight: bold;
+        margin: 10px 0 5px;
+        font-size: 1.1em;
+    }
+    .social-icons {
+        margin-top: 5px;
+    }
+    .social-icons a {
+        display: inline-block;
+        margin: 0 8px;
+        transition: transform 0.3s ease;
+    }
+    .social-icons a:hover {
+        transform: scale(1.15);
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="me.jpg" alt="Logo" class="logo">
+    <h1>John Graphics</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="graphics-designer.html">Graphics Designer</a>
+    </nav>
+</header>
+
+<main>
+    <img src="c.jpg" alt="Featured Design" class="featured">
+    <p>We help you create a consistent and professional brand identity across all touchpoints. From color schemes to typography and visual guidelines, we make sure your brand speaks with one voice.</p>
+    <p>Our branding services ensure that every interaction with your audience builds trust and recognition.</p>
+
+    <div class="gallery">
+        <a href="#img1"><img src="john1.jpg" alt="Design 1"></a>
+        <a href="#img2"><img src="john2.jpg" alt="Design 2"></a>
+        <a href="#img3"><img src="john3.jpg" alt="Design 3"></a>
+        <a href="#img4"><img src="john4.jpg" alt="Design 4"></a>
+        <a href="#img5"><img src="john5.jpg" alt="Design 5"></a>
+        <a href="#img6"><img src="john6.jpg" alt="Design 6"></a>
+        <a href="#img7"><img src="john7.jpg" alt="Design 7"></a>
+        <a href="#img8"><img src="john8.jpg" alt="Design 8"></a>
+        <a href="#img9"><img src="john9.jpg" alt="Design 9"></a>
+        <a href="#img10"><img src="john10.jpg" alt="Design 10"></a>
+        <a href="#img11"><img src="john11.jpg" alt="Design 11"></a>
+    </div>
+</main>
+
+<!-- LIGHTBOX POPUPS -->
+<div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="john1.jpg"></div>
+<div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="john2.jpg"></div>
+<div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="john3.jpg"></div>
+<div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="john4.jpg"></div>
+<div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="john5.jpg"></div>
+<div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="john6.jpg"></div>
+<div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="john7.jpg"></div>
+<div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="john8.jpg"></div>
+<div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="john9.jpg"></div>
+<div id="img10" class="lightbox"><a href="#" class="close">&times;</a><img src="john10.jpg"></div>
+<div id="img11" class="lightbox"><a href="#" class="close">&times;</a><img src="john11.jpg"></div>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        <img src="me.jpg" alt="Footer Logo" class="logo">
+        &copy; 2025 <strong>EXPERTS TECH HUB</strong> | Expertise that transforms with technology
+    </p>
+    <p class="social-heading">Find us on</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/bangaafayo/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24" style="background:#4CAFAC; border-radius:50%; padding:8px;">
+                <path d="M22.675 0h-21.35C.595 0 0 .594 0 1.326v21.348C0 23.405.595 24 1.326 24H12.82v-9.294H9.692V11.08h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.505 0-1.797.716-1.797 1.764v2.313h3.587l-.467 3.625h-3.12V24h6.116C23.405 24 24 23.405 24 22.674V1.326C24 .594 23.405 0 22.675 0z"/>
+            </svg>
+        </a>
+        <a href="https://x.com/bangaafayo1" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24" style="background:#4CAFAC; border-radius:50%; padding:8px;">
+                <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.724-.951.555-2.005.959-3.127 1.184-.897-.957-2.173-1.555-3.59-1.555-2.713 0-4.914 2.201-4.914 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.729-.666 1.577-.666 2.475 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.248-2.229-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.627 1.956 2.444 3.379 4.6 3.419-1.685 1.32-3.809 2.107-6.102 2.107-.396 0-.787-.023-1.174-.068 2.179 1.397 4.768 2.211 7.557 2.211 9.054 0 14-7.496 14-13.986 0-.213-.004-.425-.014-.636.962-.689 1.797-1.56 2.457-2.548l-.047-.02z"/>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/bangaafayo/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24" style="background:#4CAFAC; border-radius:50%; padding:8px;">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.039-1.852-3.039-1.853 0-2.136 1.447-2.136 2.941v5.667H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.605 0 4.27 2.372 4.27 5.456v6.287zM5.337 7.433c-1.144 0-2.07-.927-2.07-2.07s.926-2.07 2.07-2.07 2.07.927 2.07 2.07-.926 2.07-2.07 2.07zM6.916 20.452H3.759V9h3.157v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0z"/>
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCdWZJClDDFuQw_wfwX8TlzQ" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24" style="background:#4CAFAC; border-radius:50%; padding:8px;">
+                <path d="M23.498 6.186a2.99 2.99 0 00-2.104-2.117C19.633 3.5 12 3.5 12 3.5s-7.633 0-9.394.569A2.99 2.99 0 00.502 6.186C0 8 0 12 0 12s0 4 .502 5.814a2.99 2.99 0 002.104 2.117C4.367 20.5 12 20.5 12 20.5s7.633 0 9.394-.569a2.99 2.99 0 002.104-2.117C24 16 24 12 24 12s0-4-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>

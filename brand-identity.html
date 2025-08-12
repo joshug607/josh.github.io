@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Graphics - EXPERTS TECH HUB</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; }
+
+        /* HEADER */
+        header { background-color: #325ff1; color: white; text-align: center; padding: 20px; }
+        header img.logo { width: 100px; height: 100px; border-radius: 50%; border: 3px solid white; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+
+        /* MAIN */
+        main { max-width: 1000px; margin: 30px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        main p { font-size: 1.1em; line-height: 1.6; }
+
+        /* GALLERY */
+        .gallery { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        .gallery img { 
+            width: 100%; 
+            height: 180px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox:target {
+            display: flex;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer { background: #325ff1; color: white; text-align: center; padding: 15px 0; }
+    </style>
+</head>
+<body>
+<header>
+    <img src="me.jpg" alt="Logo" class="logo">
+    <h1>Replace</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="graphics-designer.html">Back to Graphics</a>
+    </nav>
+</header>
+<main>
+    <p>We help you create a consistent and professional brand identity across all touchpoints. From color schemes to typography and visual guidelines, we make sure your brand speaks with one voice.</p>
+    <p>Our branding services ensure that every interaction with your audience builds trust and recognition.</p>
+
+    <!-- IMAGE GALLERY -->
+    <div class="gallery">
+        <a href="#img1"><img src="john1.jpg" alt="Design 1"></a>
+        <a href="#img2"><img src="john2.jpg" alt="Design 2"></a>
+        <a href="#img3"><img src="john3.jpg" alt="Design 3"></a>
+        <a href="#img4"><img src="john4.jpg" alt="Design 4"></a>
+        <a href="#img5"><img src="john5.jpg" alt="Design 5"></a>
+        <a href="#img6"><img src="john6.jpg" alt="Design 6"></a>
+        <a href="#img7"><img src="john7.jpg" alt="Design 7"></a>
+        <a href="#img8"><img src="john8.jpg" alt="Design 8"></a>
+        <a href="#img9"><img src="john9.jpg" alt="Design 9"></a>
+        <a href="#img10"><img src="john10.jpg" alt="Design 10"></a>
+        <a href="#img11"><img src="john11.jpg" alt="Design 11"></a>
+    </div>
+</main>
+
+<!-- LIGHTBOX POPUPS -->
+<div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="john1.jpg"></div>
+<div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="john2.jpg"></div>
+<div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="john3.jpg"></div>
+<div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="john4.jpg"></div>
+<div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="john5.jpg"></div>
+<div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="john6.jpg"></div>
+<div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="john7.jpg"></div>
+<div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="john8.jpg"></div>
+<div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="john9.jpg"></div>
+<div id="img10" class="lightbox"><a href="#" class="close">&times;</a><img src="john10.jpg"></div>
+<div id="img11" class="lightbox"><a href="#" class="close">&times;</a><img src="john11.jpg"></div>
+
+<footer>
+    &copy; 2025 EXPERTS TECH HUB
+</footer>
+</body>
+</html>
